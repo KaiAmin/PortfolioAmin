@@ -5,7 +5,7 @@ import type { iconPaths } from './IconPaths';
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: 'Accueil', href: '/Portfolio' },
+	{ label: 'Accueil', href: '/Portfolio/' },
 	{ label: 'Projets', href: '/Portfolio/work/' },
 	{ label: 'À propos de moi', href: '/Portfolio/about/' },
 ];
@@ -19,7 +19,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 <nav>
 	<div class="menu-header">
-		<a href="/" class="site-title">
+		<a href="/Portfolio/" class="site-title">
 			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
 			 Amin Rachid
 		</a>
@@ -41,11 +41,9 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 							aria-current={Astro.url.pathname === href}
 							class:list={[
 								'link',
-								{
-									active:
-										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
-								},
+								 {
+            						active: Astro.url.pathname === href,  // Modification ici
+         						 },
 							]}
 							href={href}
 						>
@@ -79,11 +77,9 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 							aria-current={Astro.url.pathname === href}
 							class:list={[
 								'link',
-								{
-									active:
-										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
-								},
+								 {
+           							 active: Astro.url.pathname === href,  // Modification ici
+         						 },
 							]}
 							href={href}
 						>
@@ -129,18 +125,9 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 			/** Set whether the menu is currently expanded or collapsed. */
 			const setExpanded = (expand: boolean) => {
-    			btn.setAttribute('aria-expanded', expand ? 'true' : 'false');
-    			menu.hidden = !expand;
-
-			// Ajoutez le code ci-dessous pour mettre à jour la classe "active" des liens
-				const currentPath = Astro.url.pathname;
-				const links = document.querySelectorAll('.link');
-				links.forEach((link) => {
-					const href = link.getAttribute('href') || '';
-					const isActive = href === '/' ? currentPath === href : currentPath.includes(href);
-					link.classList.toggle('active', isActive);
-					});
-				};
+				btn.setAttribute('aria-expanded', expand ? 'true' : 'false');
+				menu.hidden = !expand;
+			};
 
 			// Toggle menu visibility when the menu button is clicked.
 			btn.addEventListener('click', () => setExpanded(menu.hidden));
