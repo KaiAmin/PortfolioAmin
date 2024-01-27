@@ -129,9 +129,18 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 			/** Set whether the menu is currently expanded or collapsed. */
 			const setExpanded = (expand: boolean) => {
-				btn.setAttribute('aria-expanded', expand ? 'true' : 'false');
-				menu.hidden = !expand;
-			};
+    			btn.setAttribute('aria-expanded', expand ? 'true' : 'false');
+    			menu.hidden = !expand;
+
+			// Ajoutez le code ci-dessous pour mettre à jour la classe "active" des liens
+				const currentPath = Astro.url.pathname;
+				const links = document.querySelectorAll('.link');
+				links.forEach((link) => {
+					const href = link.getAttribute('href') || '';
+					const isActive = href === '/' ? currentPath === href : currentPath.includes(href);
+					link.classList.toggle('active', isActive);
+					});
+				};
 
 			// Toggle menu visibility when the menu button is clicked.
 			btn.addEventListener('click', () => setExpanded(menu.hidden));
