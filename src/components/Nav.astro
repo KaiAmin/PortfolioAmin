@@ -42,7 +42,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 							class:list={[
 								'link',
 								 {
-            						active: Astro.url.pathname === href,  // Modification ici
+            						active: Astro.url.pathname === href || (href !== '/' && Astro.url.pathname.startsWith(href)),
          						 },
 							]}
 							href={href}
