@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+
+<BaseLayout title="À propos de moi">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="À propos de moi"
+				tagline="Enchanté(e) de vous accueillir ici. Parcourez cette page pour découvrir qui je suis et tracer avec moi le chemin de mon parcours."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/Villetaneuse.jpg"
+					alt="Université de Villetaneuse"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Profil</h2>
+				<div class="content">
+					<p>
+						Bonjour ! Je m'appelle Amin, un passionné d'informatique en troisième année du BUT Informatique à l'Université de Villetaneuse. 
+						Ma fascination pour le monde numérique s'est développée au fil de mes études, et je suis constamment à la recherche de nouveaux défis 
+						pour approfondir mes connaissances et affiner mes compétences.
+					</p>
+					<p style="margin-bottom: 1rem;"></p>
+					<p>
+						Mon parcours dans le domaine de l'informatique a été marqué par une curiosité insatiable et un engagement constant envers l'apprentissage. 
+						J'ai toujours été attiré par la manière par l'informatique depuis mes années au lycée, j'ai appris à explorer ce monde de l'informatique.
+						Que ce soit sur du développement logiciel ou en collaborant sur des projets innovants, 
+						chaque étape de mon parcours a contribué à forger ma compréhension de ce vaste domaine.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Éducation</h2>
+				<div class="content">
+					<p>
+						<b>B.U.T Informatique</b><br />
+						<i>IUT de Villetaneuse, Université Sorbonne Paris Nord</i><br />
+						<span class="date">Actuellement en troisième année (En cours)</span><br />
+					</p>
+					<p style="margin-bottom: 1rem;"></p>
+					<p>
+						<b>Baccalauréat Scientifique (Spécialités : N.S.I et Mathématiques)</b><br />
+						<i>Lycée Voillaume, Aulnay-sous-Bois</i><br />
+						<span class="date">Année d'obtention : 2020/2021</span><br />
+						Mention : Bien
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Compétences</h2>
+				<div class="content">
+					<p><b>Langages de programmation</b></p>
+					<p style="margin-bottom: 1rem;"></p>
+					<p>
+					   Durant mes années en B.U.T j'ai appris à maîtriser des nombreux langages de programmation
+					   allant de Java, Javascript, HTML/CSS ou encore en Python qui est le langage sur lequel
+					   j'aimerais me spécialiser pour mon avenir
+					</p>
+					<p style="margin-bottom: 1rem;"></p>
+					<p><b>Développement Web</b></p>
+					<p style="margin-bottom: 1rem;"></p>
+					<p>
+					   Mon parcours en m'a également permis d'explorer le vaste domaine du développement web.
+					   J'ai acquis des compétences pratiques dans la création d'interfaces interactives en utilisant des technologies 
+					   essentielles telles que HTML, CSS et JavaScript. Ces langages m'ont permis de concevoir des expériences utilisateur 
+					   fluides et attrayantes.
+					</p>
+					<p style="margin-bottom: 1rem;"></p>
+					<p><b>Base de données</b></p>
+					<p style="margin-bottom: 1rem;"></p>
+					<p> 
+						J'ai une expertise approfondie en gestion de bases de données, notamment en concevant et optimisant des schémas relationnels 
+						avec le langage SQL. Mon expérience inclut également l'utilisation de bases de données NoSQL, notamment MongoDB, pour le 
+						stockage de données non structurées. Ces expériences ont renforcé ma compréhension des modèles de données et ont développé mes 
+						compétences dans la manipulation et l'optimisation des bases de données.
+					</p>
+					<p style="margin-bottom: 1rem;"></p>
+					<p><b>Outils et Technologies</b></p>
+					<p style="margin-bottom: 1rem;"></p>
+					<p>
+    					Au cours de mes études j'ai développé une familiarité approfondie avec divers outils et technologies essentiels 
+						dans le domaine de l'informatique. J'ai utilisé Git pour la gestion de version, assurant ainsi un suivi efficace des 
+						modifications de code et facilitant la collaboration lors des projets de groupe.
+					</p>
+					<p>
+    					J'ai également travaillé avec Docker pour le déploiement et la gestion d'environnements, optimisant ainsi le processus 
+						de développement et assurant la portabilité des applications. Ces outils font désormais partie intégrante de ma boîte 
+						à outils, contribuant à la création d'applications robustes et évolutives.
+					</p>
+					<p style="margin-bottom: 3rem;"></p>
+					<p>
+    					Cette liste n'est pas exhaustive, et mes compétences évoluent constamment. Je suis passionné par l'apprentissage 
+						continu et je suis ouvert à explorer de nouvelles technologies pour relever des défis stimulants
+					</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
