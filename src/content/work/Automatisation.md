@@ -1,7 +1,7 @@
 ---
 title: Projet d'Automatisation
 publishDate: 2023-21-12 00:00:00
-img: /public/assets/testImage.jpg
+img: /PortfolioAmin/assets/testImage.jpg
 img_alt: Presentation projet automatisation
 description: |
   
