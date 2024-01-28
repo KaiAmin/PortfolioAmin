@@ -1,7 +1,7 @@
 ---
 title: Projet Site Vitrine
 publishDate: 2020-03-02 00:00:00
-img: /PortfolioAmin/public/assets/Lycee.jpg
+img: /PortfolioAmin/assets/Lycee.jpg
 img_alt: Page Cdi
 description: Page du CDI
 tags:
