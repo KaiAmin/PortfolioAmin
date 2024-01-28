@@ -34,8 +34,13 @@ const { title, description } = Astro.props;
 		<style>
 			:root {
 				--_placeholder-bg: linear-gradient(transparent, transparent);
+<<<<<<< HEAD
 				--bg-image-main: url('/PortfolioAmin/assets/backgrounds/bg-main-light-800w.jpg');
 				--bg-image-main-curves: url('/PortfolioAmin/assets/backgrounds/bg-main-light.svg');
+=======
+				--bg-image-main: url('public/assets/backgrounds/bg-main-light-800w.jpg');
+				--bg-image-main-curves: url('public/assets/backgrounds/bg-main-light.svg');
+>>>>>>> ba3f771899f12e505a57aef1af2adb9c66c355e8
 				--bg-image-subtle-1: var(--_placeholder-bg);
 				--bg-image-subtle-2: var(--_placeholder-bg);
 				--bg-image-footer: var(--_placeholder-bg);
@@ -48,8 +53,13 @@ const { title, description } = Astro.props;
 			}
 
 			:root.theme-dark {
+<<<<<<< HEAD
 				--bg-image-main: url('/PortfolioAmin/assets/backgrounds/bg-main-dark-800w.jpg');
 				--bg-image-main-curves: url('/PortfolioAmin/assets/backgrounds/bg-main-dark.svg');
+=======
+				--bg-image-main: url('public/assets/backgrounds/bg-main-dark-800w.jpg');
+				--bg-image-main-curves: url('public/assets/backgrounds/bg-main-dark.svg');
+>>>>>>> ba3f771899f12e505a57aef1af2adb9c66c355e8
 				--bg-svg-blend-mode: darken;
 				--bg-blend-mode: lighten;
 			}
@@ -57,6 +67,7 @@ const { title, description } = Astro.props;
 			/* These backgrounds are displayed below the fold, so we lazy load them
 			   once the `.loaded` class has been set.  */
 			:root.loaded {
+<<<<<<< HEAD
 				--bg-image-subtle-1: url('/PortfolioAmin/assets/backgrounds/bg-subtle-1-light-800w.jpg');
 				--bg-image-subtle-2: url('/PortfolioAmin/assets/backgrounds/bg-subtle-2-light-800w.jpg');
 				--bg-image-footer: url('/PortfolioAmin/assets/backgrounds/bg-footer-light-800w.jpg');
@@ -65,11 +76,22 @@ const { title, description } = Astro.props;
 				--bg-image-subtle-1: url('/PortfolioAmin/assets/backgrounds/bg-subtle-1-dark-800w.jpg');
 				--bg-image-subtle-2: url('/PortfolioAmin/assets/backgrounds/bg-subtle-2-dark-800w.jpg');
 				--bg-image-footer: url('/PortfolioAmin/assets/backgrounds/bg-footer-dark-800w.jpg');
+=======
+				--bg-image-subtle-1: url('public/assets/backgrounds/bg-subtle-1-light-800w.jpg');
+				--bg-image-subtle-2: url('public/assets/backgrounds/bg-subtle-2-light-800w.jpg');
+				--bg-image-footer: url('public/assets/backgrounds/bg-footer-light-800w.jpg');
+			}
+			:root.loaded.theme-dark {
+				--bg-image-subtle-1: url('public/assets/backgrounds/bg-subtle-1-dark-800w.jpg');
+				--bg-image-subtle-2: url('public/assets/backgrounds/bg-subtle-2-dark-800w.jpg');
+				--bg-image-footer: url('public/assets/backgrounds/bg-footer-dark-800w.jpg');
+>>>>>>> ba3f771899f12e505a57aef1af2adb9c66c355e8
 			}
 
 			@media (min-width: 50em) {
 				:root {
 					--bg-scale: 1;
+<<<<<<< HEAD
 					--bg-image-main: url('/PortfolioAmin/assets/backgrounds/bg-main-light-1440w.jpg');
 				}
 				:root.theme-dark {
@@ -85,6 +107,23 @@ const { title, description } = Astro.props;
 					--bg-image-subtle-1: url('/PortfolioAmin/assets/backgrounds/bg-subtle-1-dark-1440w.jpg');
 					--bg-image-subtle-2: url('/PortfolioAmin/assets/backgrounds/bg-subtle-2-dark-1440w.jpg');
 					--bg-image-footer: url('/PortfolioAmin/assets/backgrounds/bg-footer-dark-1440w.jpg');
+=======
+					--bg-image-main: url('public/assets/backgrounds/bg-main-light-1440w.jpg');
+				}
+				:root.theme-dark {
+					--bg-image-main: url('public/assets/backgrounds/bg-main-dark-1440w.jpg');
+				}
+
+				:root.loaded {
+					--bg-image-subtle-1: url('public/assets/backgrounds/bg-subtle-1-light-1440w.jpg');
+					--bg-image-subtle-2: url('public/assets/backgrounds/bg-subtle-2-light-1440w.jpg');
+					--bg-image-footer: url('public/assets/backgrounds/bg-footer-light-1440w.jpg');
+				}
+				:root.loaded.theme-dark {
+					--bg-image-subtle-1: url('public/assets/backgrounds/bg-subtle-1-dark-1440w.jpg');
+					--bg-image-subtle-2: url('public/assets/backgrounds/bg-subtle-2-dark-1440w.jpg');
+					--bg-image-footer: url('public/assets/backgrounds/bg-footer-dark-1440w.jpg');
+>>>>>>> ba3f771899f12e505a57aef1af2adb9c66c355e8
 				}
 			}
 
@@ -93,7 +132,11 @@ const { title, description } = Astro.props;
 				isolation: isolate;
 				background:
 					/*noise*/
+<<<<<<< HEAD
 					url('/PortfolioAmin/assets/backgrounds/noise.png') top center/220px repeat,
+=======
+					url('public/assets/backgrounds/noise.png') top center/220px repeat,
+>>>>>>> ba3f771899f12e505a57aef1af2adb9c66c355e8
 					/*footer*/ var(--bg-image-footer) bottom center/var(--bg-gradient-size) no-repeat,
 					/*header1*/ var(--bg-image-main-curves) top center/var(--bg-gradient-size) no-repeat,
 					/*header2*/ var(--bg-image-main) top center/var(--bg-gradient-size) no-repeat,
