@@ -1,7 +1,7 @@
 ---
 title: Projet Personnel
 publishDate: 2019-12-01 00:00:00
-img: /public/assets/Grafana.jpg
+img: Portfolio/public/assets/Grafana.jpg
 img_alt: Données
 description: |
   Projet personnel sur l'exploitation des données de mon ordinateur
